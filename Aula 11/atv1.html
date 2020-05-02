@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+
+<body>
+    <h1>Nacionalidade</h1>
+
+    <p>Qual a sua nacionalidade?</p>
+    Digite em qual país você nasceu:
+
+    <input type="text" name="txtnac" id="t">
+
+    <input type="button" value="Enviar" name="btn1" id="btn1" onclick="nac()">
+
+    <div id="res"></div>
+
+    <script>
+        function nac() {
+            var t = window.document.getElementById('t').value
+            var res = window.document.getElementById('res')
+
+            if (t == "Brasil") {
+                res.innerHTML = (`<p>Você nasceu no <strong>${t}</strong>, então você é <strong>brasileiro</strong>!</p>`)
+            }
+
+            else if(t != "Brasil") {
+                res.innerHTML = (`<p>Você nasceu no(a) <strong>${t}</strong>, então você não é <strong>brasileiro</strong>!`)
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
